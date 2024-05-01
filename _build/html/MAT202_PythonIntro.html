@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Coordinate Transformations in 2D" href="methods/MAT201M_2DVT.html" />
+    <link rel="next" title="1. Coordinate Transformations in 2D" href="methods/MAT202M_2DVT.html" />
     <link rel="prev" title="Welcome" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,27 +114,27 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="methods/MAT201M_2DVT.html">
+  <a class="reference internal" href="methods/MAT202M_2DVT.html">
    1. 2D Viewing Transforms
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="methods/MAT201M_3DVT.html">
+  <a class="reference internal" href="methods/MAT202M_3DVT.html">
    2. 3D Viewing Transforms
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="methods/MAT201M_3DVT2.html">
+  <a class="reference internal" href="methods/MAT202M_3DVT2.html">
    3. More 3D Viewing Transforms
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="methods/MAT201M_RaysIntro.html">
+  <a class="reference internal" href="methods/MAT202M_RaysIntro.html">
    4. Ray Tracing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="methods/MAT201M_RaysBoxes.html">
+  <a class="reference internal" href="methods/MAT202M_RaysBoxes.html">
    5. Rays and Boxes
   </a>
  </li>
@@ -464,7 +464,9 @@ Jupyter and python can be launched through the Anaconda data science platform on
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sin(x)**2 + cos(x)**2
-1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -481,10 +483,12 @@ Jupyter and python can be launched through the Anaconda data science platform on
 \[\displaystyle x\]</div>
 </div>
 </div>
-<p>where the command has differentiated the first expression with respect to x. We can perform partial derivatives just as easily: lets say we need \begin{equation}
-\frac{\partial}{\partial x} \left(x^3+y+axy\right),
-\end{equation}
-where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are independent variables:</p>
+<p>where the command has differentiated the first expression with respect to x. We can perform partial derivatives just as easily: lets say we need</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial}{\partial x} \left(x^3+y+axy\right), 
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are independent variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">onehalf</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="p">,</span> <span class="n">x</span><span class="p">)</span>
@@ -496,8 +500,12 @@ where <span class="math notranslate nohighlight">\(x\)</span> and <span class="m
 \[\displaystyle 3 x^{2} + \frac{y}{2}\]</div>
 </div>
 </div>
-<p>easy peasy! What about integration? We know that (ignoring the constants of integration for now)
-\begin{equation}\int \frac{1} ~{\rm{d}}x=\ln{|x|}+c,\end{equation} but so does sympy:</p>
+<p>easy peasy! What about integration? We know that (ignoring the constants of integration for now)</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{1}{{x}} ~{\rm{d}}x=\ln{|x|}+c,
+\]</div>
+<p>but so does sympy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
@@ -559,7 +567,7 @@ where <span class="math notranslate nohighlight">\(x\)</span> and <span class="m
             <p class="prev-next-title">Welcome</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="methods/MAT201M_2DVT.html" title="next page">
+    <a class='right-next' id="next-link" href="methods/MAT202M_2DVT.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">1. </span>Coordinate Transformations in 2D</p>

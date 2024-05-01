@@ -158,9 +158,12 @@ print( sym.simplify( sym.cos(x) * sym.cos(x) + sym.sin(x) * sym.sin(x)) )
 sym.diff(onehalf * x ** 2, x)
 
 
-# where the command has differentiated the first expression with respect to x. We can perform partial derivatives just as easily: lets say we need \begin{equation} 
+# where the command has differentiated the first expression with respect to x. We can perform partial derivatives just as easily: lets say we need 
+# 
+# $$
 # \frac{\partial}{\partial x} \left(x^3+y+axy\right), 
-# \end{equation}
+# $$
+# 
 # where $x$ and $y$ are independent variables:
 
 # In[11]:
@@ -170,7 +173,12 @@ sym.diff(x ** 3 + y + onehalf * x * y , x)
 
 
 # easy peasy! What about integration? We know that (ignoring the constants of integration for now) 
-# \begin{equation}\int \frac{1}{{x}} ~{\rm{d}}x=\ln{|x|}+c,\end{equation} but so does sympy:
+# 
+# $$
+# \int \frac{1}{{x}} ~{\rm{d}}x=\ln{|x|}+c,
+# $$
+# 
+# but so does sympy:
 
 # In[12]:
 
@@ -188,9 +196,3 @@ solution[x], solution[y]
 
 
 # It can also solve matrix equations and tons of other clever things. However, this is plenty of information to begin to explore simple differential calculus that we'll encounter in our MAT201 dynamics lectures.
-
-# In[ ]:
-
-
-
-
