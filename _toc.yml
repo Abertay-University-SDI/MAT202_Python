@@ -24,15 +24,15 @@ parts:
 - caption: Methods
   numbered: true
   chapters:
-  - file: methods/MAT201M_2DVT.ipynb
+  - file: methods/MAT202M_2DVT.ipynb
     title: 2D Viewing Transforms
-  - file: methods/MAT201M_3DVT.ipynb
+  - file: methods/MAT202M_3DVT.ipynb
     title: 3D Viewing Transforms
-  - file: methods/MAT201M_3DVT2.ipynb
+  - file: methods/MAT202M_3DVT2.ipynb
     title: More 3D Viewing Transforms
-  - file: methods/MAT201M_RaysIntro.ipynb
+  - file: methods/MAT202M_RaysIntro.ipynb
     title: Ray Tracing
-  - file: methods/MAT201M_RaysBoxes.ipynb
+  - file: methods/MAT202M_RaysBoxes.ipynb
     title: Rays and Boxes
 - numbered: false
   chapters:
