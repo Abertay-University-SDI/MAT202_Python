@@ -29,7 +29,9 @@ parts:
   - file: methods/MAT202M_3DVT.ipynb
     title: 3D Viewing Transforms
   - file: methods/MAT202M_3DVT2.ipynb
-    title: More 3D Viewing Transforms
+    title: 3D Viewing Transforms: Reflection
+  - file: methods/MAT202M_3DVT2a.ipynb
+    title: 3D Viewing Transforms: Arbitrary Rotations
   - file: methods/MAT202M_RaysIntro.ipynb
     title: Ray Tracing
   - file: methods/MAT202M_RaysBoxes.ipynb
