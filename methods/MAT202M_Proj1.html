@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projection 1 &#8212; MAT202 Mathematics for Application Development</title>
+    <title>5. Projection 1 &#8212; MAT202 Mathematics for Application Development</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,6 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Projection 2" href="MAT202M_Proj2.html" />
+    <link rel="prev" title="4. Other 3D Transformations 2: Rotation" href="MAT202M_3DVT2a.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
   Methods
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="MAT202M_2DVT.html">
    1. 2D Viewing Transforms
@@ -131,14 +133,24 @@ const thebe_selector_output = ".output, .cell_output"
    4. 3D VTs - Arbitrary Rotations
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Orthographic Projection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MAT202M_Proj2.html">
+   6. Perspective Projection
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="MAT202M_RaysIntro.html">
-   5. Ray Tracing
+   7. Ray Tracing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="MAT202M_RaysBoxes.html">
-   6. Rays and Boxes
+   8. Rays and Boxes
   </a>
  </li>
 </ul>
@@ -259,17 +271,17 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#orthoganol-projection">
-   Orthoganol Projection
+   5.1. Orthoganol Projection
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lecture-example">
-     Lecture Example:
+     5.1.1. Lecture Example:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting">
-     Plotting
+     5.1.2. Plotting
     </a>
    </li>
   </ul>
@@ -296,17 +308,17 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#orthoganol-projection">
-   Orthoganol Projection
+   5.1. Orthoganol Projection
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lecture-example">
-     Lecture Example:
+     5.1.1. Lecture Example:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting">
-     Plotting
+     5.1.2. Plotting
     </a>
    </li>
   </ul>
@@ -321,7 +333,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="projection-1">
-<h1>Projection 1<a class="headerlink" href="#projection-1" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Projection 1<a class="headerlink" href="#projection-1" title="Permalink to this headline">¶</a></h1>
 <p>We have seen how maths (and Python) can be used to transform coordinates in 2D and 3D. Projection is the process of representing all or part of a 3D object on a 2D screen. Projection shares some common features with 2D and 3D transformations: it commonly uses specific matrix forms in order to perform specific operations.</p>
 <p>In this workbook we will consider the first of two different types of projection, and the resulting impact on the projected image.</p>
 <div class="cell docutils container">
@@ -357,7 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="orthoganol-projection">
-<h2>Orthoganol Projection<a class="headerlink" href="#orthoganol-projection" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Orthoganol Projection<a class="headerlink" href="#orthoganol-projection" title="Permalink to this headline">¶</a></h2>
 <p>In orthoganol projection, the direction of projection is always perpendicular to the view plane. This type of projection <em>preserves lines and angles</em> of the original object, but will lose depth information. As such, orthoganol projection is common to subjects like architecture or in the technical drawing of complex objects, used as plans to create real objects.</p>
 <p>In the lectures, we learned that the homogenous coordinate transformation matrix, <span class="math notranslate nohighlight">\(T_{\rm{orth}}\)</span> is required to orthoganolly project any general point onto a plane whose equation is <span class="math notranslate nohighlight">\(ax+by+cz=d\)</span>. This matrix takes the form:</p>
 <div class="math notranslate nohighlight">
@@ -372,7 +384,7 @@ T_{\rm{orth}}=
 \end{split}\]</div>
 <p>Let’s examine this in operation with an example:</p>
 <div class="section" id="lecture-example">
-<h3>Lecture Example:<a class="headerlink" href="#lecture-example" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>Lecture Example:<a class="headerlink" href="#lecture-example" title="Permalink to this headline">¶</a></h3>
 <p><strong>Calculate the images of the points <span class="math notranslate nohighlight">\((3,5,-1)\)</span> and <span class="math notranslate nohighlight">\((-4,2,6)\)</span> when projected onto the plane <span class="math notranslate nohighlight">\(-2x+4y-z=3\)</span></strong>.</p>
 <p>We can begin this problem by creating the array of points to project:</p>
 <div class="cell docutils container">
@@ -500,7 +512,7 @@ T_{\rm{orth}}=
 <p>The “np.isclose” function returns “true” if the difference between the two arguments is negligible. As you can see, Python is confident that these positions satisfy the plane equation, implying that we have likely carried out our projection successfully.</p>
 </div>
 <div class="section" id="plotting">
-<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.2. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
 <p>Displaying orthoganol projections in 3D is tricky to do in Python: remember we are projecting a 3D line onto another 3D object, then attempting to display the result in 2D.</p>
 <p>Orthoganol projection is always carried out along the normal to the plane. To illustrate this, we will display the plane, the original points, the projected points and the (unit) normal for this plane. The viewing angle (and the range over which the plane is calculated/displayed) can mean that sometimes visualising this plot produces confusing results.</p>
 <p>First let’s calculate the unit normal:</p>
@@ -616,7 +628,21 @@ T_{\rm{orth}}=
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="MAT202M_3DVT2a.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Other 3D Transformations 2: Rotation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="MAT202M_Proj2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Projection 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
