@@ -29,9 +29,9 @@ parts:
   - file: methods/MAT202M_3DVT.ipynb
     title: 3D Viewing Transforms
   - file: methods/MAT202M_3DVT2.ipynb
-    title: 3D VTs - Reflection
+    title: Other 3D Transforms: Reflection
   - file: methods/MAT202M_3DVT2a.ipynb
-    title: 3D VTs - Arbitrary Rotations
+    title: Other 3D Transforms: Arbitrary Rotations
   - file: methods/MAT202M_Proj1.ipynb
     title: Orthographic Projection
   - file: methods/MAT202M_Proj2.ipynb
