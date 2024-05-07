@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # More 3D Coordinate Transformations 2
+# # Other 3D Transformations 2: Rotation
 # 
 # We have already shown how Python is capable of performing and visualising the standard set of operations for 3D graphics transformations.
 # 
@@ -65,6 +65,7 @@ from mpl_toolkits.mplot3d import proj3d
 # $$
 # 
 # Such a rotation would need to occur at the origin, so the familiar translation stages are required:
+# 
 # $$
 # T_{-\underline{p}} = 
 # 	{\begin{pmatrix}

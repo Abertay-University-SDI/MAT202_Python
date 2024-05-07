@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # More 3D Coordinate Transformations 1
+# # Other 3D Transformations 1: Reflection
 # 
 # We have already shown how Python is capable of performing and visualising the standard set of operations for 3D graphics transformations.
 # 
