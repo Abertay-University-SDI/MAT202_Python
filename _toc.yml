@@ -32,6 +32,10 @@ parts:
     title: 3D VTs - Reflection
   - file: methods/MAT202M_3DVT2a.ipynb
     title: 3D VTs - Arbitrary Rotations
+  - file: methods/MAT202M_Projection1.ipynb
+    title: Orthographic Projection
+  - file: methods/MAT202M_Projection2.ipynb
+    title: Perspective Projection
   - file: methods/MAT202M_RaysIntro.ipynb
     title: Ray Tracing
   - file: methods/MAT202M_RaysBoxes.ipynb
