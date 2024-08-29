@@ -171,8 +171,8 @@ plt.show()
 # In[4]:
 
 
-theta = 45
-v = [0,1,1]
+theta = 30
+v = [1,1,1]
 mv = np.linalg.norm(v) #modulus of v
 lam = np.linalg.norm(v[0:2]) #modulus of first two elements of v
 A_vk = np.matrix([[v[0]*v[2]/lam/mv, -v[1]/lam, v[0]/mv, 0], 
@@ -331,11 +331,15 @@ R_tv = np.matrix([[alpha*alpha*(1-ct)+ct, alpha*beta*(1-ct)+gamma*st, alpha*gamm
                 [alpha*gamma*(1-ct)+beta*st, beta*gamma*(1-ct)-alpha*st, gamma*gamma*(1-ct)+ct, 0],
                 [0, 0, 0, 1]])
 
-print("rotated positions by alignment operations:")
-print(fp)
-fp2 = kp.transpose()*R_tv
-print("rotated positions by 3D rotation matrix:")
-print(fp2)
+T_mp = np.matrix([[1, 0, 0, 0], 
+                [0, 1, 0, 0], 
+                [0, 0, 1, 0],
+                [-1,-2, -3, 1]])
+T_pp = np.matrix([[1, 0, 0, 0], 
+                [0, 1, 0, 0], 
+                [0, 0, 1, 0],
+                [1, 2, 3, 1]])
+T_mp*R_tv*T_pp
 
 
 # Note that the solutions are identical. We can actually prove they are identical (though we have to use a special command, as, due to the trig functions, some of the values disagree by 15 or so decimal places(!). The "np.allclose" function checks element by element if two arrays are equal within a tolerance:
